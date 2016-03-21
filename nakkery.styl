@@ -1,0 +1,185 @@
+/* ==========================================================================
+   Flexbox gridy - by JKallunki
+   ========================================================================== */
+$guttery = .2em
+$guttery-large = .6em
+$guttery-xlarge = 1em
+$max-columns = 12
+$max-order = 20
+
+.flexbox .nakkery
+  display flex
+  flex-wrap wrap
+  list-style none
+  margin 0
+  padding 0
+  &.guttery
+    margin -($guttery) 0 ($guttery) (-($guttery))
+    > .plop
+      padding $guttery 0 0 $guttery
+  &.guttery-large
+    margin -($guttery-large) 0 $guttery-large (-($guttery-large))
+    > .plop
+      padding $guttery-large 0 0 $guttery-large
+  &.guttery-xlarge
+    margin -($guttery-xlarge) 0 $guttery-xlarge (-($guttery-xlarge))
+    > .plop
+      padding $guttery-xlarge 0 0 $guttery-xlarge
+  &.top
+    align-items flex-start
+  &.bottom
+    align-items flex-end
+  &.center
+    align-items center
+  &.stretch
+    align-items stretch
+  &.baseline
+    align-items baseline
+  &.justify
+    justify-content space-between
+  &.justify-center
+    justify-content center
+  &.justify-around
+    justify-content space-around
+  &.flexy-plops > .plop
+    display flex
+  &.autosize > .plop
+    flex none
+    max-width 100%
+    width auto
+  &.fit > .plop
+    flex 1
+  &.full > .plop
+    flex 0 0 100%
+  .plop
+    flex 1
+    &.reset
+      flex 1 !important
+    &.top
+      align-self flex-start
+    &.bottom
+      align-self flex-end
+    &.center
+      align-self center
+    &.toright
+      margin-left auto
+    &.tobottom
+      margin-top auto
+    &.toautosize
+      flex none
+      max-width 100%
+      width auto
+    &.tofit
+      flex 1
+    &.tofull
+      flex 0 0 100%
+    for i in range(1, $max-order)
+      &.order{i}
+        order i
+
+.flexbox .nakkery
+  for i in range(2, $max-columns)
+    &.for{i} > .plop
+      flex 0 0 round((100% / i), 3)
+      max-width round((100% / i), 3)
+    .plop
+      &.of{i}
+        flex 0 0 round((100% / i), 3)
+        max-width round((100% / i), 3)
+      for j in 1..i - 1
+        &.to{j}of{i}
+          flex 0 0 round((100% * (j / i)), 3)
+          max-width round((100% * (j / i)), 3)
+
+@media (min-width: 36em)
+  .flexbox .nakkery
+    &.med-guttery
+      margin -($guttery) 0 $guttery (-($guttery))
+      > .plop
+        padding $guttery 0 0 $guttery
+    &.med-guttery-large
+      margin -($guttery-large) 0 $guttery-large (-($guttery-large))
+      > .plop
+        padding $guttery-large 0 0 $guttery-large
+    &.med-guttery-xlarge
+      margin -($guttery-xlarge) 0 $guttery-xlarge (-($guttery-xlarge))
+      > .plop
+        padding $guttery-xlarge 0 0 $guttery-xlarge
+    &.med-autosize > .plop
+      flex none
+      max-width 100%
+      width auto
+    &.med-fit > .plop
+      flex 1
+    &.med-full > .plop
+      flex 0 0 100%
+    .plop
+      &.med-toautosize
+        flex none
+        max-width 100%
+        width auto
+      &.med-tofit
+        flex 1
+      &.med-tofull
+        flex 0 0 100%
+      for i in range(1, $max-order)
+        &.med-order{i}
+          order i
+    for i in range(2, $max-columns)
+      &.med-for{i} > .plop
+        flex 0 0 round((100% / i), 3)
+        max-width round((100% / i), 3)
+      .plop
+        &.med-of{i}
+          flex 0 0 (100% / i)
+          max-width (100% / i)
+        for j in 1..i - 1
+          &.med-to{j}of{i}
+            flex 0 0 round((100% * (j / i)), 3)
+            max-width round((100% * (j / i)), 3)
+
+@media (min-width: 48em)
+  .flexbox .nakkery
+    &.large-guttery
+      margin -($guttery) 0 $guttery (-($guttery))
+      > .plop
+        padding $guttery 0 0 $guttery
+    &.large-guttery-large
+      margin -($guttery-large) 0 $guttery-large (-($guttery-large))
+      > .plop
+        padding $guttery-large 0 0 $guttery-large
+    &.large-guttery-xlarge
+      margin -($guttery-xlarge) 0 $guttery-xlarge (-($guttery-xlarge))
+      > .plop
+        padding $guttery-xlarge 0 0 $guttery-xlarge
+    &.large-autosize > .plop
+      flex none
+      max-width 100%
+      width auto
+    &.large-fit > .plop
+      flex 1
+    &.large-full > .plop
+      flex 0 0 100%
+    .plop
+      &.large-toautosize
+        flex none
+        max-width 100%
+        width auto
+      &.large-tofit
+        flex 1
+      &.large-tofull
+        flex 0 0 100%
+      for i in range(1, $max-order)
+        &.large-order{i}
+          order i
+    for i in range(2, $max-columns)
+      &.large-for{i} > .plop
+        flex 0 0 round((100% / i), 3)
+        max-width round((100% / i), 3)
+      .plop
+        &.large-of{i}
+          flex 0 0 (100% / i)
+        for j in 1..i - 1
+          &.large-to{j}of{i}
+            flex 0 0 round((100% * (j / i)), 3)
+            max-width round((100% * (j / i)), 3)
