@@ -5,8 +5,11 @@ Mixed column count, classes via wrapper and/or columns, custom gutter for mixed 
 
 Jade-HTML example:
 ```
-.nakkery.full
-  .plop.top.nakkery.autosize.justify-center
-      .plop
-        p test
+article.nakkery.top.full
+  header#minheightsomething.plop.nakkery.baseline.autosize.justify-center
+      a(href='/').plop Go there
+      p.plop.tofull.med-of2.large-autosize I'm here
+      p.plop.tofull.med-of2.large-autosize and here
+  footer.plop.tobottom
+    p Ending
 ```
