@@ -9,9 +9,9 @@ Jade-HTML example:
 ```
 article.nakkery.top.full
   header#minheightsomething.plop.nakkery.baseline.autosize.justify-center
-      a(href='/').plop Go there
-      p.plop.tofull.med-of2.large-autosize I'm here
-      p.plop.tofull.med-of2.large-autosize and here
+      a(href='/').plop Baseline Autosize (justify-center)
+      p.plop.tofull.med-of3.large-autosize 1of3
+      p.plop.tofull.med-2of7.large-autosize 2of7
   footer.plop.tobottom
-    p Ending
+    p Flex-end
 ```
