@@ -1,0 +1,6 @@
+{
+  "name": "Nakkery-flexgrid",
+  "tagline": "Flexbox grid, html and css/stylus",
+  "body": "# nakkery-flexgrid\r\nFlexbox grid for html and css/stylus\r\n\r\nMixed column count, classes via wrapper and/or columns, custom gutter for mixed wrappers\r\n\r\nJade-HTML example:\r\n```\r\narticle.nakkery.top.full\r\n  header#minheightsomething.plop.nakkery.baseline.autosize.justify-center\r\n      a(href='/').plop Go there\r\n      p.plop.tofull.med-of2.large-autosize I'm here\r\n      p.plop.tofull.med-of2.large-autosize and here\r\n  footer.plop.tobottom\r\n    p Ending\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
