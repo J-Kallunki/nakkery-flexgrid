@@ -10,8 +10,8 @@ Jade-HTML example:
 article.nakkery.top.full
   header#minheightsomething.plop.nakkery.baseline.autosize.justify-center
       a(href='/').plop Baseline Autosize (justify-center)
-      p.plop.tofull.med-of3.large-autosize 1of3
-      p.plop.tofull.med-2of7.large-autosize 2of7
+      p.plop.tofull.med-autosize.tolarge-of3 full/autosize/1of3
+      p.plop.tofull.med-toautosize.tolarge-2of7 full/autosize/2of7
   footer.plop.tobottom
     p Flex-end
 ```
